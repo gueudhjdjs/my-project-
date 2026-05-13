@@ -1,0 +1,54 @@
+SETUP INSTRUCTIONS FOR IMAGE AND VIDEO DETECTION
+================================================
+
+1. Install Python Dependencies:
+   pip install -r requirements.txt
+
+2. Install Tesseract OCR (Required for Image Text Extraction):
+
+   For Windows:
+   - Download Tesseract installer from: https://github.com/UB-Mannheim/tesseract/wiki
+   - Install it (default location: C:\Program Files\Tesseract-OCR)
+   - Add Tesseract to your system PATH or update app.py with the path:
+     
+     Add this line after imports in app.py:
+     pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+
+   For Linux:
+   sudo apt-get install tesseract-ocr
+
+   For Mac:
+   brew install tesseract
+
+3. Verify Installation:
+   - Open command prompt/terminal
+   - Type: tesseract --version
+   - You should see version information
+
+4. Run the Application:
+   python app.py
+
+5. Access the Application:
+   - Open browser and go to: http://127.0.0.1:5000
+   - Login or signup
+   - You'll see new options:
+     * Detect from Image - Upload images with news text
+     * Detect from Video - Upload videos with news text
+
+FEATURES ADDED:
+===============
+1. Image Detection: Upload images (PNG, JPG, JPEG, GIF, BMP) containing news text
+   - System extracts text using OCR
+   - Analyzes the extracted text for fake news detection
+
+2. Video Detection: Upload videos (MP4, AVI, MOV, MKV, FLV) containing news
+   - System extracts text from video frames
+   - Analyzes the combined text for fake news detection
+
+3. All predictions are saved to history with [IMAGE] or [VIDEO] tags
+
+TROUBLESHOOTING:
+================
+- If you get "pytesseract not found" error, make sure Tesseract is installed and in PATH
+- For video processing issues, ensure ffmpeg is installed (moviepy dependency)
+- Large video files may take time to process

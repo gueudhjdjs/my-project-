@@ -1,0 +1,10 @@
+News: Aliens have secretly landed in New York City and the government is covering it up.
+Feedback: no
+
+News: Aliens have secretly landed in New York City and the government is covering it up
+Feedback: yes
+
+
+News: Aliens have secretly landed in New York City and the government is covering it up
+Feedback: yes
+

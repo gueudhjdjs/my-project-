@@ -1,0 +1,25 @@
+Model Training Results:
+Accuracy: 99.48%
+This is excellent accuracy for fake news detection!
+
+Classification Report:
+FAKE News Detection:
+
+Precision: 99% (when it says FAKE, it's right 99% of the time)
+Recall: 100% (catches almost all fake news)
+F1-Score: 99%
+REAL News Detection:
+
+Precision: 100% (when it says REAL, it's right 100% of the time)
+Recall: 99% (catches 99% of real news)
+F1-Score: 99%
+Confusion Matrix:
+✅ 4,545 fake articles correctly identified as FAKE
+✅ 4,258 real articles correctly identified as REAL
+❌ 21 fake articles incorrectly labeled as REAL (false positives)
+❌ 25 real articles incorrectly labeled as FAKE (false negatives)
+Model Improvements Made:
+Better data cleaning - removed empty and very short texts
+Improved TF-IDF vectorizer - added bigrams and better parameters
+Enhanced model parameters - added regularization and early stopping
+Stratified split - ensures balanced training/test sets
